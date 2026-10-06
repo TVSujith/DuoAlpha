@@ -3,7 +3,7 @@ const http = require('http');
 async function testSuite() {
   console.log('--- STARTING DUOALPHA AUTOMATED TEST SUITE ---');
 
-  const BASE_URL = 'http://localhost:5000/api';
+  const BASE_URL = 'https://duoalpha.onrender.com';
 
   async function request(endpoint, options = {}) {
     const res = await fetch(`${BASE_URL}${endpoint}`, {
