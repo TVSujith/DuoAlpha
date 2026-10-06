@@ -1,6 +1,6 @@
 import { io } from 'socket.io-client';
 
-const API_BASE = '/api';
+const API_BASE = 'https://duoalpha.onrender.com';
 
 export function getAuthToken() {
   return localStorage.getItem('duoalpha_token');
@@ -59,7 +59,7 @@ let socketInstance = null;
 
 export function getSocket() {
   if (!socketInstance) {
-    socketInstance = io(window.location.origin, {
+    socketInstance = io('https://duoalpha.onrender.com', {
       transports: ['websocket', 'polling'],
       autoConnect: true
     });
