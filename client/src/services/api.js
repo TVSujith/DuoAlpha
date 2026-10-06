@@ -1,6 +1,6 @@
 import { io } from 'socket.io-client';
 
-const API_BASE = 'https://duoalpha.onrender.com';
+const API_BASE = 'https://duoalpha.onrender.com/api';
 
 export function getAuthToken() {
   return localStorage.getItem('duoalpha_token');
